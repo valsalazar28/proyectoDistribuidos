@@ -8,7 +8,6 @@ import random
 ''' 
 
 
-# Configuración de la pantalla
 WIDTH, HEIGHT = 600, 400
 GRID_SIZE = 20
 GRID_WIDTH = WIDTH // GRID_SIZE
@@ -17,13 +16,11 @@ WHITE = (255, 255, 255)
 GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 
-# Direcciones
 UP = (0, -1)
 DOWN = (0, 1)
 LEFT = (-1, 0)
 RIGHT = (1, 0)
 
-# Clase Snake
 class Snake:
     def __init__(self):
         self.length = 1
@@ -76,7 +73,6 @@ class Snake:
                 elif event.key == pygame.K_RIGHT:
                     self.turn(RIGHT)
 
-# Clase Food
 class Food:
     def __init__(self):
         self.position = (0, 0)
@@ -91,7 +87,6 @@ class Food:
         pygame.draw.rect(surface, self.color, r)
         pygame.draw.rect(surface, WHITE, r, 1)
 
-# Función principal
 def main():
     pygame.init()
     clock = pygame.time.Clock()
